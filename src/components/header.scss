@@ -1,0 +1,49 @@
+.Header_Standard {
+    //width: 1360px;
+    height: 54px;
+    border: 1px solid blue;
+    padding-top: 10px;
+    .Button {
+      width: 124px;
+      height: 40px;
+    }
+    .Logo_RIMAC {
+      width: 99px;
+      height: 16px;
+      // Fill style: Red_1_Rimac;
+    }
+    .Group_15735 {
+      width: 109px;
+      height: 24px;
+      ._01_411_6001 {
+        color: #6f7cff;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: left;
+        line-height: 24px;
+        // Text Fill style: Acian_2_Hover;
+        // Text style: Paragraph/Reg_14px;
+      }
+      .gl_phone20x20 {
+        width: 20px;
+        height: 20px;
+        .ic_phone {
+          width: 13px;
+          height: 16px;
+          // Fill style: Acian_2_Hover;
+        }
+      }
+    }
+    .Tienes_alguna_duda {
+      color: #676f8f;
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: normal;
+      text-align: right;
+      line-height: 20px;
+      // Text Fill style: Gray_2_Paragraph;
+      // Text style: Paragraph/Reg_12px;
+    }
+  }
+  
