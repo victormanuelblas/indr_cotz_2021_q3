@@ -1,10 +1,65 @@
-import React from 'react'
+import React, { useEffect, useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import CotzContext from '../context/cotz/cotz_context';
 import Header from './header'
 import './home.scss'
 import home_prin_m_png from '../resources/home-prin-m.png'
 import home_prin_d_png from '../resources/home-prin-d.png'
 import home_tracking_png from '../resources/home-tracking.png'
+
+
 const Home = () => {
+    const { prospectList, getProspectList, prospectSelc, getProspect } = useContext(CotzContext);
+    
+    const [prosInfo,setProsInfo] = useState({
+        cotz_tdoc: 'DNI',
+        cotz_ndoc: '',
+        cotz_telf: '',
+        cotz_plac: ''
+    });
+
+    useEffect(() => {
+       getProspectList();
+    },[]);
+    
+    let history = useHistory();
+    
+    const LeerFormulario = (e) => {
+        let tget_name = e.target.name;
+        let tget_value = e.target.value;
+
+        setProsInfo({
+            ...prosInfo,
+            [tget_name] : tget_value
+        })
+    }
+
+    const SelectProspectId = () => {
+        let rtrn_value = 0;
+        let pros_selc = [];
+    
+        if (prospectList.rows){
+            pros_selc = Object.values(prospectList.rows).filter(pros => pros.cotz_docs === document.getElementById('cotz_ndoc').value);
+        }
+
+        if (pros_selc.length > 0){
+            //pros_id = pros_selc.map((item) => item.cotz_ctrl).toString();
+            rtrn_value = pros_selc[0].cotz_ctrl;
+        }
+        
+        return rtrn_value;
+        
+    }
+
+    const WorkProspect = (e) => {
+        
+        e.preventDefault();
+        let prosId = SelectProspectId();
+        getProspect(prosId, prosInfo);
+
+        history.push("/carinfo");
+    }
+
     return (
         <>
             <Header />
@@ -38,7 +93,7 @@ const Home = () => {
                             <div class="form_datos_cont">
                                 <div class="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_tipo">
-                                        <select name="cotz_tdoc" className="form-control" id="select">
+                                        <select name="cotz_tdoc" className="form-control" id="cotz_selt" onChange={LeerFormulario}>
                                             <option>DNI</option>
                                             <option>CE</option>
                                         </select>
@@ -52,19 +107,19 @@ const Home = () => {
                                         <svg width="2" height="56" viewBox="0 0 2 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.666504 0V56" stroke="#C5CBE0" stroke-width="1.00694"></path></svg>
                                     </div>
                                     <div class="form_datos_cont_ident_detl">
-                                        <input type="text" name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_numr" id="cotz_ndoc" placeholder="Nro. de doc" />
+                                        <input name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_numr" id="cotz_ndoc" placeholder="Nro. de doc" onChange={LeerFormulario} onBlur={SelectProspectId} />
                                     </div>
                                 </div>
 
                                 <div className="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_detl">
-                                        <input type="text" name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_otro" id="cotz_ndoc" placeholder="Celular" />
+                                        <input name="cotz_telf" className="form-control form_datos_cont_ident_detl_otro" id="cotz_telf" placeholder="Celular" onChange={LeerFormulario} />
                                     </div>
                                 </div>
 
                                 <div className="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_detl">
-                                        <input type="text" name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_otro border-0" id="cotz_ndoc" placeholder="Placa" />
+                                        <input name="cotz_plac" className="form-control form_datos_cont_ident_detl_otro" id="cotz_plac" placeholder="Placa" onChange={LeerFormulario} />
                                     </div>
                                 </div>
 
@@ -77,11 +132,11 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <button className="form_datos_cont_action">COTÍZALO</button>
+                                <button className="form_datos_cont_action" onClick={WorkProspect}>COTÍZALO</button>
 
                             </div>
 
-                        </div>
+                        </div> 
                         <div className="col-12 d-none d-md-block col-md-4"></div>
                     </div>
 
