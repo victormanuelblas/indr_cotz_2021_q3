@@ -11,11 +11,11 @@ import home_tracking_png from '../resources/home-tracking.png'
 const Home = () => {
     const { prospectList, getProspectList, prospectSelc, getProspect } = useContext(CotzContext);
     
-    const [prosInfo,setProsInfo] = useState({
+    const [prosInfo, setProsInfo] = useState({
         cotz_tdoc: 'DNI',
         cotz_ndoc: '',
         cotz_telf: '',
-        cotz_plac: ''
+        cotz_placa: ''
     });
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
     
     let history = useHistory();
     
-    const LeerFormulario = (e) => {
+    const leerFormulario = (e) => {
         let tget_name = e.target.name;
         let tget_value = e.target.value;
 
@@ -34,7 +34,7 @@ const Home = () => {
         })
     }
 
-    const SelectProspectId = () => {
+    const selectProspectId = () => {
         let rtrn_value = 0;
         let pros_selc = [];
     
@@ -51,13 +51,13 @@ const Home = () => {
         
     }
 
-    const WorkProspect = (e) => {
+    const workProspect = (e) => {
         
         e.preventDefault();
-        let prosId = SelectProspectId();
+        let prosId = selectProspectId();
         getProspect(prosId, prosInfo);
 
-        history.push("/carinfo");
+        history.push("/armatuplan");
     }
 
     return (
@@ -93,7 +93,7 @@ const Home = () => {
                             <div class="form_datos_cont">
                                 <div class="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_tipo">
-                                        <select name="cotz_tdoc" className="form-control" id="cotz_selt" onChange={LeerFormulario}>
+                                        <select name="cotz_tdoc" className="form-control" id="cotz_selt" onChange={leerFormulario}>
                                             <option>DNI</option>
                                             <option>CE</option>
                                         </select>
@@ -107,19 +107,19 @@ const Home = () => {
                                         <svg width="2" height="56" viewBox="0 0 2 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.666504 0V56" stroke="#C5CBE0" stroke-width="1.00694"></path></svg>
                                     </div>
                                     <div class="form_datos_cont_ident_detl">
-                                        <input name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_numr" id="cotz_ndoc" placeholder="Nro. de doc" onChange={LeerFormulario} onBlur={SelectProspectId} />
+                                        <input name="cotz_ndoc" className="form-control form_datos_cont_ident_detl_numr" id="cotz_ndoc" placeholder="Nro. de doc" onChange={leerFormulario} onBlur={selectProspectId} />
                                     </div>
                                 </div>
 
                                 <div className="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_detl">
-                                        <input name="cotz_telf" className="form-control form_datos_cont_ident_detl_otro" id="cotz_telf" placeholder="Celular" onChange={LeerFormulario} />
+                                        <input name="cotz_telf" className="form-control form_datos_cont_ident_detl_otro" id="cotz_telf" placeholder="Celular" onChange={leerFormulario} />
                                     </div>
                                 </div>
 
                                 <div className="form_datos_cont_ident">
                                     <div class="form_datos_cont_ident_detl">
-                                        <input name="cotz_plac" className="form-control form_datos_cont_ident_detl_otro" id="cotz_plac" placeholder="Placa" onChange={LeerFormulario} />
+                                        <input name="cotz_placa" className="form-control form_datos_cont_ident_detl_otro" id="cotz_placa" placeholder="Placa" onChange={leerFormulario} />
                                     </div>
                                 </div>
 
@@ -132,7 +132,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <button className="form_datos_cont_action" onClick={WorkProspect}>COTÍZALO</button>
+                                <button className="form_datos_cont_action" onClick={workProspect}>COTÍZALO</button>
 
                             </div>
 

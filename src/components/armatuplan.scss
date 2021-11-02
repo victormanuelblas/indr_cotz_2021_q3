@@ -1,0 +1,523 @@
+.armatuplan {
+
+    .armatuplan_prin_m {
+        //background: #F7F8FC;
+        border: 1px solid yellow;
+        .Group_16370 {
+            width: 360px;
+            height: 48px;
+            text-align: center;
+            .Group_15814 {
+              width: 296px;
+              height: 24px;
+              display: inline-flex;
+              margin-top: 10px;
+              
+              .Bar {
+                width: 176px;
+                height: 6px;
+                .Rectangle_79 {
+                  width: 176px;
+                  height: 6px;
+                  border-radius: 20px;
+                  display: none;
+                  // Fill style: Gray_5;
+                }
+                .Rectangle_80 {
+                  width: 176px;
+                  height: 6px;
+                  border-radius: 20px;
+                  // Fill style: Acian_2;
+                }
+              }
+              .Group_15812 {
+                width: 104px;
+                height: 24px;
+                .Group_15813 {
+                  width: 104px;
+                  height: 24px;
+                  display: inline-flex;
+                  .Group_15775 {
+                    width: 68px;
+                    height: 16px;
+                    .Paso_2_de_2 {
+                      color: #676f8f;
+                      font-family: Lato;
+                      font-size: 10px;
+                      font-weight: 700;
+                      line-height: 16px;
+                      margin-top: 5px;
+                      margin-left: 10px;
+                      // Text Fill style: Gray_2_Paragraph;
+                      // Text style: Title_09/Bol_10px_Upper;
+                    }
+                  }
+                  .icon_Back {
+                    width: 24px;
+                    height: 24px;
+                    //margin-left: -20px;
+                    //display: inline-flex;
+                    .Back {
+                      width: 24px;
+                      height: 24px;
+                      margin-top: -12px;
+                      .Ellipse {
+                        width: 23px;
+                        height: 23px;
+                        border: 1px solid #f0f2fa;
+                        border-radius: 50%;
+                        // Stroke style: Gray_6;
+                      }
+                    }
+                    .gl_arrow_left {
+                      width: 12px;
+                      height: 12px;
+                      margin-left: 8px;
+                      .chevrot {
+                        width: 4px;
+                        height: 7px;
+                        // Fill style: Gray_5;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        .carinfo_prin_m_deta {
+            /* Rectangle 1346 */
+            //position: relative;
+            width: 360px;
+            height: 340px;
+            background: #F7F8FC;
+            //text-align: center;
+            .carinfo_prin_m_deta_sepr {
+                height: 2px;
+            }
+            .carinfo_prin_m_deta_mira {
+                width: 296px;
+                height: 36px;
+                margin-left: 30px;
+                margin-top: 30px;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 28px;
+                line-height: 36px;
+                letter-spacing: -0.6px;
+                color: #494F66;
+                // Text Fill style: Gray_1_Títulos;
+                // Text style: Title_04/M_Regular_28px;
+            }
+            .carinfo_prin_m_deta_conoce {
+                width: 296px;
+                height: 28px;
+                margin-left: 30px;
+                margin-top: 20px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;
+                color: #676F8F; 
+            }
+            .carinfo_prin_m_deta_card {
+                width: 296px;
+                height: 156px;
+                margin-top: 10px;
+                margin-left: 20px;
+                background-image: url("../resources/carinfo-card-prin-m.png");
+                .carinfo_prin_m_deta_card_sepr {
+                    height: 2px;
+                }
+                .card_info {
+                    width: 176px;
+                    height: 20px;
+                    margin-left: 40px;
+                    .card_info_placa {
+                      color: #a3abcc;
+                      font-family: Roboto;
+                      font-size: 12px;
+                      font-weight: normal;
+                      line-height: 20px;
+                      margin-top: 40px;
+                      // Text Fill style: Gray_3;
+                      // Text style: Paragraph/Reg_12px;
+                    }
+                    .card_info_detalle {
+                        color: #494f66;
+                        font-family: Lato;
+                        font-size: 20px;
+                        font-weight: normal;
+                        line-height: 28px;
+                        // Text Fill style: Gray_1_Títulos;
+                        // Text style: Title_06/Regular_20px;
+                      }                      
+                  }                  
+            }
+           
+              
+        }
+
+        .Group_16903 {
+            width: 185px;
+            height: 44px;
+            margin-top: 20px;
+            margin-left: 20px;
+            .suma_asegurada {
+              color: #494f66;
+              font-family: Lato;
+              font-size: 16px;
+              font-weight: normal;
+              text-align: center;
+              line-height: 24px;
+              // Text Fill style: Gray_1_Títulos;
+              // Text style: Title_07/Regular_16px;
+            }
+            .montos {
+                display: inline-flex;
+                margin-left: 6px;
+                .minimo {
+                    color: #676f8f;
+                    font-family: Lato;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 16px;
+                    // Text Fill style: Gray_2_Paragraph;
+                    // Text style: Title_08/Regular_12px_Upper;
+                  }
+                  .maximo {
+                    color: #676f8f;
+                    font-family: Lato;
+                    font-size: 12px;
+                    font-weight: normal;
+                    line-height: 16px;
+                    // Text Fill style: Gray_2_Paragraph;
+                    // Text style: Title_08/Regular_12px_Upper;
+                  }
+                  .separador {
+                      width: 1px;
+                      height: 16px;
+                      background: #e4e8f7;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      // Fill style: Gray_5;
+                    }      
+            }
+        }
+          
+        .Group_16909 {
+            width: 296px;
+            height: 56px;
+            margin-top: 30px;
+            margin-left: 20px;
+            .contenedor {
+                width: 296px;
+                height: 56px;
+                background: #ffffff;
+                border: 1px solid #c5cbe0;
+                border-radius: 4px;
+                margin-top: -40px;
+                // Fill style: White;
+                // Stroke style: Gray_4;
+            }
+            .acciones {
+                width: 264px;
+                height: 24px;
+                display: inline-flex;
+                margin-left: 18px;
+                .monto {
+                color: #494f66;
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: normal;
+                text-align: center;
+                line-height: 24px;
+                margin-top: 15px;
+                width: 230px;
+                // Text Fill style: Gray_1_Títulos;
+                // Text style: Title_07/Regular_16px;
+                }
+                .gl_remove {
+                width: 16px;
+                height: 16px;
+                margin-top: 15px;
+                background-image: url("../resources/armaplan-gl-remove.png");
+                }
+                .gl_add {
+                width: 16px;
+                height: 16px;
+                margin-top: 15px;
+                background-image: url("../resources/armaplan-gl-add.png");
+                }
+            }
+        }
+        
+        .coberturas_titulo {
+            width: 290px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #494f66;
+            font-family: Lato;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 28px;
+            // Text Fill style: Gray_1_Títulos;
+            // Text style: Title_06/Regular_20px;
+        }
+
+        .coberturas_detalle {
+            width: 360px;
+            height: 56px;
+            font-family: Lato;
+            font-size: 10px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 16px;
+            display: inline-flex;
+            margin-top: 40px;
+            border-bottom: 1px solid #C5CBE0;
+            div {
+                width: 80px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .protege_auto {
+              color: #ef3340;
+            }
+            .protege_rodean {
+              color: #494f66;
+            }
+            .mejora_plan {
+              color: #494f66;
+            }            
+          }
+
+        .coberturas_contenido {
+            width: 360px;
+            min-height: 200px;
+            margin-top: 30px;
+            .contenido_detalle {
+                width: 290px;
+                min-height: 100px;
+                margin-left: 20px;
+                margin-top: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #C5CBE0;
+                //border: 1px solid blue;
+                .detalle_header {
+                    width: 290px;
+                    height: 40px;
+                    display: inline-flex;
+                    .icono {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .texto {
+                        width: 200px;
+                        margin-left: 10px;
+                        color: #494f66;
+                        font-family: Lato;
+                        font-size: 16px;
+                        font-weight: normal;
+                        line-height: 24px;
+                    }
+                    .accion {
+                        width: 40px;
+                    }
+                }
+                .detalle_body {
+                    width: 290px;
+                    .body_texto {
+                        width: 200px;
+                        margin-left: 50px;
+                        color: #676f8f;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: normal;
+                        line-height: 24px;
+                        // Text Fill style: Gray_2_Paragraph;
+                        // Text style: Paragraph/Reg_14px;
+                    }
+                }
+                .detalle_footer {
+                    width: 290px;
+                    margin-top: 10px;
+                    .footer_boton {
+                        width: 200px;
+                        margin-left: 50px;
+                    }
+                }
+            }
+            .Group_16751 {
+                width: 213px;
+                height: 40px;
+                border: 1px solid red;
+                .Group_16601 {
+                  width: 213px;
+                  height: 40px;
+                  .Llanta_robada {
+                    color: #494f66;
+                    font-family: Lato;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 24px;
+                    // Text Fill style: Gray_1_Títulos;
+                    // Text style: Title_07/Regular_16px;
+                  }
+                  .icon_theft {
+                    width: 40px;
+                    height: 40px;
+                    .Rectangle_18 {
+                      width: 40px;
+                      height: 40px;
+                      background: #c4c4c4;
+                    }
+                    .Group_98 {
+                      width: 40px;
+                      height: 40px;
+                      .Group {
+                        width: 34px;
+                        height: 35px;
+                        .Vector {
+                          width: 34px;
+                          height: 34px;
+                        }
+                        .Group {
+                          width: 16px;
+                          height: 16px;
+                          .Vector {
+                            width: 16px;
+                            height: 16px;
+                          }
+                        }
+                        .Vector {
+                          width: 9px;
+                          height: 13px;
+                        }
+                        .Group {
+                          width: 8px;
+                          height: 11px;
+                          .Vector {
+                            width: 8px;
+                            height: 11px;
+                          }
+                        }
+                        .Vector {
+                          width: 14px;
+                          height: 8px;
+                        }
+                      }
+                      .Vector {
+                        width: 27px;
+                        height: 20px;
+                      }
+                      .Group {
+                        width: 32px;
+                        height: 26px;
+                        .Vector {
+                          width: 32px;
+                          height: 26px;
+                        }
+                      }
+                      .Vector {
+                        width: 6px;
+                        height: 9px;
+                      }
+                      .Vector {
+                        width: 6px;
+                        height: 8px;
+                      }
+                      .Vector {
+                        width: 3px;
+                        height: 4px;
+                      }
+                    }
+                    .Vector {
+                      width: 0px;
+                      height: 0px;
+                    }
+                  }
+                }
+              }
+              .Vector {
+                width: 3px;
+                height: 1px;
+              }
+              .Group {
+                width: 5px;
+                height: 8px;
+                .Vector {
+                  width: 2px;
+                  height: 6px;
+                }
+              }
+              .Vector {
+                width: 40px;
+                height: 40px;
+              }
+              
+        }
+
+        .resumen_plan {
+            width: 360px;
+            height: 76px;
+            margin-top: 50px;
+            .contenedor {
+              width: 360px;
+              height: 76px;
+              //margin-top: -70px;
+              //background: #ffffff;
+              box-shadow: 0px 8px 30px rgba(20, 43, 127, 0.1),0px 1px 4px rgba(163, 171, 204, 0.06);
+              // Fill style: White;
+              // Effect style: Shadow 1;
+            }
+            .plan_boton_accion {
+                width: 168px;
+                height: 44px;
+                margin-left: 20px;
+                background: #ef3340;
+                border-radius: 6px;
+                color: #ffffff;
+                font-family: Lato;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+                line-height: 16px;
+                border: none;
+              }
+
+            .plan_detalle {
+              width: 104px;
+              height: 48px;
+              margin-left: 20px;
+              .detalle_info {
+                width: 104px;
+                height: 48px;
+                .info_plazo {
+                  color: #494f66;
+                  font-family: Lato;
+                  font-size: 10px;
+                  font-weight: 700;
+                  line-height: 16px;
+                  // Text Fill style: Gray_1_Títulos;
+                  // Text style: Title_09/Bol_10px_Upper;
+                }
+                .info_monto {
+                  color: #494f66;
+                  font-family: Lato;
+                  font-size: 24px;
+                  font-weight: normal;
+                  line-height: 32px;
+                  // Text Fill style: Gray_1_Títulos;
+                  // Text style: Title_05/M_Regular_24px;
+                }
+              }
+            }
+          }
+          
+    }
+}
+
+  

@@ -6,7 +6,8 @@ import axios from 'axios';
 const CotzState = (props) => {
     const initialState = {
         prospectList: [],
-        prospectSelc: null
+        prospectSelc: [],
+        prospectAmounts: []
     }
 
     const [state, dispatch] = useReducer(CotzReducer, initialState)
@@ -27,7 +28,7 @@ const CotzState = (props) => {
     }
     
     const getProspect = async (prosId, prosInfo) => {
-        let {cotz_tdoc,cotz_ndoc,cotz_telf,cotz_plac} = prosInfo
+        let {cotz_tdoc,cotz_ndoc,cotz_telf,cotz_placa} = prosInfo
         
         let config = {
             headers : {
@@ -42,47 +43,39 @@ const CotzState = (props) => {
             pros_data = rspn.data;
         }
         
-        let pros_info = "{tdoc : '" + cotz_tdoc + "',ndoc : '" + cotz_ndoc + "',telf : '" + cotz_telf + "',plac : '" + cotz_plac + "',nomb : '" + pros_data.cotz_nomb + "'}";
-        
+        let pros_info = {}
+        pros_info.tdoc = cotz_tdoc
+        pros_info.ndoc = cotz_ndoc
+        pros_info.telf = cotz_telf
+        pros_info.placa = cotz_placa
+        pros_info.nombre = pros_data.cotz_nomb        
+
         dispatch({
-            type: 'COTZ_GET_PROS',
-            payload: JSON.stringify(pros_info) 
+            type: 'COTZ_SET_PROS_INFO',
+            payload : pros_info
         })
+
     }
 
-    const setCarInfo = (carInfo) => {
-        console.log(carInfo);
+    const setProspectAmounts = (sumaAsegurada, cuotaMensual) => {
+        let montos = {}
+        montos.sumaAsegurada = sumaAsegurada
+        montos.cuotaMensual = cuotaMensual
+console.log('grabando montos state', montos);
         dispatch({
-            type: 'COTZ_CAR_INFO',
-            payload: carInfo
+            type: 'COTZ_SET_PROS_AMOUNTS',
+            payload: montos
         })
-    }
-
-    const postClinInfo = async (clinInfo) => {
-        console.log(clinInfo);
-        let config = {
-            headers : {
-                Authorization: "Basic YWRtaW5AYWdlbmNzaS5jb206OGRHZ1NZLVB3NkR0LVBXVzloWS1lYkFHZg==",
-            }
-        }
-
-        const rspn = await axios.post('https://aut.creceidea.com/public/sximoapi/1?module=cotzmodlpers', clinInfo, config)
-        console.log(rspn.data)
-        dispatch({
-            type: 'COTZ_POST_INFO',
-            payload: rspn.data
-        })
-
     }
     
     return (
         <CotzContext.Provider value={{
             prospectList: state.prospectList,
             prospectSelc: state.prospectSelc,
+            prospectAmounts: state.prospectAmounts,
             getProspectList,
             getProspect,
-            setCarInfo,
-            postClinInfo
+            setProspectAmounts
         }}>
             {props.children}
         </CotzContext.Provider>

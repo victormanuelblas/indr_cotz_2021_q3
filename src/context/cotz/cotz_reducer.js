@@ -1,4 +1,4 @@
-import {COTZ_GET_PROS_LIST, COTZ_GET_PROS, COTZ_CARS_INFO, COTZ_POST_INFO} from '../types';
+import {COTZ_GET_PROS_LIST, COTZ_SET_PROS_INFO, COTZ_SET_PROS_AMOUNTS} from '../types';
 
 export default (state, action) => {
     const {type, payload} = action;
@@ -9,20 +9,15 @@ export default (state, action) => {
                 ...state,
                 prospectList: payload
             }
-        case COTZ_GET_PROS:
+        case COTZ_SET_PROS_INFO:
             return {
                 ...state,
                 prospectSelc: payload
             }
-        case COTZ_CARS_INFO:
+        case COTZ_SET_PROS_AMOUNTS:
             return {
                 ...state,
-                carInfo: payload
-            }
-        case COTZ_POST_INFO:
-            return {
-                ...state,
-                postInfo: payload
+                prospectAmounts: payload
             }
         default:
             return state;
