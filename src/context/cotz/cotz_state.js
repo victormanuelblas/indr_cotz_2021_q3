@@ -49,7 +49,7 @@ const CotzState = (props) => {
         pros_info.telf = cotz_telf
         pros_info.placa = cotz_placa
         pros_info.nombre = pros_data.cotz_nomb        
-
+        
         dispatch({
             type: 'COTZ_SET_PROS_INFO',
             payload : pros_info
@@ -61,7 +61,7 @@ const CotzState = (props) => {
         let montos = {}
         montos.sumaAsegurada = sumaAsegurada
         montos.cuotaMensual = cuotaMensual
-console.log('grabando montos state', montos);
+
         dispatch({
             type: 'COTZ_SET_PROS_AMOUNTS',
             payload: montos

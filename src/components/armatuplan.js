@@ -20,6 +20,7 @@ const Armatuplan = () => {
     //información del cliente prospecto y el auto
     let placa = prospectSelc.placa;
     let nombre = prospectSelc.nombre;
+    
     //el modelo se podria seleccionar desde un modal, o acceder a alguna API que devuelva información a partir de la placa
     let modelo = 'Volkswagen 2021 Gol '
     //opciones de cobertura
@@ -90,7 +91,6 @@ const Armatuplan = () => {
     let history = useHistory();
 
     function grabarMontos (e) {
-        console.log('grabando')
         e.preventDefault();
         setProspectAmounts(montoAsegurado,cuotaMensual)
 
@@ -236,6 +236,7 @@ const Armatuplan = () => {
                     </div>
 
                     <div className="row resumen_plan">
+                        <div className="plan_contenedor"></div>
                         <div className="plan_detalle">
                             <div className="detalle_info">
                                 <div className="info_monto">${Intl.NumberFormat("es-PE", { minimumFractionDigits: 2 }).format(cuotaMensual)}</div>
@@ -243,7 +244,7 @@ const Armatuplan = () => {
                             </div>
                         </div>
                         <button  className="plan_boton_accion" onClick={grabarMontos}>LO QUIERO</button>
-                        <div className="contenedor"></div>
+                        
                     </div>
 
                 </div>
